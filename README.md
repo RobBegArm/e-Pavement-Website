@@ -1,2 +1,8 @@
-# E-Pavement
-An original website for the tech company "E-Pavement" OÜ. Test version deployed at https://e-pavement.netlify.app/home
+## [E-Pavement Website](https://e-pavement.netlify.app/home)
+
+An original website made for the tech company "E-Pavement" OÜ. 
+Built using React JS.
+- UI design
+- Website structure, styling and responsiveness
+- Website deployment 
+- Search Engine Optimization
