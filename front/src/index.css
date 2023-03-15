@@ -1,0 +1,255 @@
+/*
+Smallest Screen Size: 320px
+*/
+
+/*Global Defaults*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.focusable:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(12, 50, 86, 0.7) !important;
+}
+
+html {
+  /* def font-size:16px
+  62.5% -> 1rem = 10px */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+:root {
+  /* #1864ab as source */
+  /*Primary Color*/
+  --main-color: #020a11;
+  /*Tints*/
+  --tint-10: #1b2329;
+  --tint-20: #353b41;
+  --tint-30: #4e5458;
+  --tint-40: #676c70;
+  --tint-50: #818588;
+  --tint-60: #9a9da0;
+  --tint-70: #b3b6b8;
+  --tint-80: #cccecf;
+  --tint-90: #e6e7e7;
+  /*Shades*/
+  --shade-10: #02090f;
+  /*Bright Version*/
+  --bright-40: #0e3c67;
+  --bright-50: #0c3256;
+  --bright-60: #0a2844;
+  --bright-70: #071e33;
+  --bright-80: #051422;
+  /*Admiral Version*/
+  --admiral: #051094;
+  --admiral-10: #050e85;
+  --admiral-20: #040d76;
+  /* Secondary Color */
+  /*Shades*/
+}
+
+body {
+  line-height: 1.1;
+  font-weight: 400;
+  color: #555;
+  font-size: 2rem;
+  overflow: hidden;
+  background: var(--tint-10);
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to left, #96a6bf, #63738c);
+  box-shadow: inset 0 0 1px 1px #5c6670;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to left, #8391a6, #536175);
+}
+
+/* CONTAINERS */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.centered--vertically {
+  align-items: center;
+}
+
+.flex--centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--centered-vertically {
+  display: flex;
+  align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+section {
+  padding-bottom: 6rem;
+}
+
+/* GRIDS */
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--3-rows {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* ICONS */
+
+.icon {
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Buttons */
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+/* Utility */
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.active * {
+  box-shadow: 0 1px #fff;
+}
+
+@media (max-width: 65em) {
+  .active * {
+    box-shadow: none;
+  }
+}
+
+/* Animations */
+
+.shade {
+  animation: shade 0.2s ease-out;
+}
+
+@keyframes shade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* headlines */
+
+h2 {
+  padding: 5rem 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+h3 {
+  padding: 3rem 2rem;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* FONTS */
+
+.description-text {
+  line-height: 1.4;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.description-text strong {
+  font-weight: 500;
+}
+
+@media (max-width: 30em) {
+  .description-text {
+    font-size: 1.8rem;
+  }
+}
+
+/* GENERAL QUERIES */
+
+/* Below 1200px (Landscape Tablets) */
+@media (max-width: 75em) {
+  html {
+    /*56.25% -> 1rem = 9px*/
+    font-size: 56.25%;
+  }
+}
+
+/* Box-shadows and cards */
+
+.box-shadow-1 {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
+.shadowed-card-1 {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+  border-radius: 4px;
+}
+
+.shadowed-card-2 {
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 15px;
+  border-radius: 5px;
+}

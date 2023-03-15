@@ -1,0 +1,123 @@
+/*Z-index range: 9-12 */
+
+.main-navbar {
+  position: absolute;
+  left: 20vw;
+  top: 20vh;
+  background-color: var(--main-color);
+  padding: 0;
+  z-index: 11;
+}
+
+.main-nav-list {
+  position: relative;
+  list-style: none;
+  overflow: visible;
+  z-index: 12;
+}
+
+.main-nav-list li * {
+  margin-bottom: 4rem;
+  float: left;
+  line-height: 0.8;
+}
+
+.main-nav-list * {
+  transition: all 0.3s ease-out;
+}
+
+.main-nav-list li a {
+  font-size: 6.5rem;
+  color: #fff;
+}
+
+.main-nav-list li p {
+  margin: 0;
+  padding: 0;
+  z-index: 12;
+}
+
+.main-nav-list:hover > * {
+  opacity: 0.3;
+}
+
+.main-nav-list:hover > *:hover {
+  opacity: 1;
+}
+
+.background,
+.background--pattern {
+  position: absolute;
+  left: -20vw;
+  top: -40vh;
+  width: 120vw;
+  height: 140vh;
+}
+
+.background {
+  z-index: 9;
+  background-color: var(--main-color);
+}
+
+.background--pattern {
+  z-index: 10;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  transition: all 0.8s ease;
+}
+
+/* Animating shrinking on hover */
+.main-nav-list:hover ~ .background--pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+/* Separate Animation Class */
+
+.animate--menu-open {
+  animation: animation--menu-open 0.3s ease-out;
+}
+
+@keyframes animation--menu-open {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Below 688px  */
+@media (max-width: 43em) {
+  .main-navbar {
+    top: 15vh;
+  }
+
+  .main-navbar p {
+    font-size: 5.2rem;
+  }
+}
+
+/* Below 608px height  */
+@media (max-height: 38em) {
+  .main-navbar {
+    top: 10vh;
+  }
+
+  .main-navbar p {
+    font-size: 5rem;
+  }
+}
+
+/* Below 416px  */
+@media (max-width: 26em) {
+  .main-navbar p {
+    font-size: 4rem;
+  }
+}

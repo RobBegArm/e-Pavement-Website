@@ -1,0 +1,157 @@
+.section--about-us {
+  background-color: var(--tint-10);
+  color: #fff;
+}
+
+.our-story-box {
+  padding: 4rem;
+}
+
+.our-story-box h2,
+.our-story-box p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1;
+  padding: 4rem;
+  padding-top: 0;
+}
+
+.our-story-box p {
+  text-align: start;
+  align-self: start;
+}
+
+.our-story-box h2 {
+  padding-bottom: 0;
+}
+
+.our-story-box picture {
+  grid-column: 2;
+  padding: 2rem;
+}
+
+.our-story-picture-1 {
+  grid-row: 1 / span 2;
+}
+
+.our-story-picture-2 {
+  grid-row: 3 / span 2;
+}
+
+@media (max-width: 60em) {
+  .our-story-box {
+    grid-template-columns: 1fr;
+  }
+
+  .our-story-box picture {
+    grid-column: 1;
+  }
+
+  .our-story-picture-1 {
+    grid-row: 3 / span 1;
+  }
+
+  .our-story-picture-2 {
+    grid-row: 5 / span 1;
+  }
+
+  .our-story-box h2,
+  .our-story-box picture,
+  .our-story-box p {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 60em) {
+  .our-story-box {
+    padding: 0;
+  }
+}
+
+.partners h2 {
+  text-align: center;
+}
+
+.collabs {
+  list-style: none;
+}
+
+.icon-box {
+  font-size: 5rem;
+}
+
+.collabs li,
+.icon-box {
+  display: flex;
+  align-items: center;
+}
+
+.collabs li {
+  max-width: 75rem;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.collabs p {
+  text-align: start;
+}
+
+@media (max-width: 47em) {
+  .collabs {
+    padding: 2rem;
+  }
+}
+
+.partner-logos-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  list-style: none;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 8rem;
+}
+
+.partner-logos-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.partner-logos-list li:nth-child(n + 9) {
+  grid-column: span 2;
+}
+
+@media (max-width: 65em) {
+  .partner-logos-list {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 2rem;
+  }
+
+  .partner-logos-list li {
+    grid-column: span 2;
+  }
+
+  .partner-logos-list li:nth-child(n + 7) {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 60em) {
+  .partner-logos-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partner-logos-list li:nth-child(n) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 32em) {
+  .partner-logos-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

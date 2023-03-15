@@ -1,0 +1,35 @@
+.section--page-not-found {
+  background-color: var(--tint-10);
+  color: #fff;
+  padding: 5rem;
+}
+
+.message-box {
+  background-color: var(--tint-20);
+  margin: 0 auto;
+  max-width: 40vw;
+  padding: 12rem;
+}
+
+.message-box p {
+  font-size: 3rem;
+}
+
+@media (max-width: 68em) {
+  .message-box {
+    max-width: 60vw;
+    padding: 4rem;
+  }
+}
+
+/* Below 432px */
+@media (max-width: 27em) {
+  .message-box {
+    max-width: 70vw;
+    padding: 3rem;
+  }
+
+  .message-box p {
+    font-size: 2.4rem;
+  }
+}

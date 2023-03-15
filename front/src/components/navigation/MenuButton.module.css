@@ -1,0 +1,40 @@
+.menu-btn,
+.menu-btn:link,
+.menu-btn:visited {
+  padding: 1rem;
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  font-size: 2.4rem;
+  display: flex;
+  transition: all 0.3s linear;
+}
+
+.menu-btn div {
+  padding: 0 0.5rem;
+}
+
+.menu-btn-icon-box {
+  color: inherit;
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+}
+
+/* Button Animation */
+
+.menu-btn:hover {
+  color: #dddd;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 65em) {
+  .menu-btn {
+    display: flex;
+  }
+}

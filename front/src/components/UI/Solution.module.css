@@ -1,0 +1,55 @@
+.solution {
+  padding: 1rem 0;
+}
+
+.img-container {
+  display: flex;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+.solution img {
+  height: auto;
+  transition: all 0.3s ease-in;
+}
+
+.solution img:hover {
+  scale: 102%;
+  z-index: 999;
+}
+
+.solution h3,
+.solution p {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.solution p {
+  padding: 1rem 18rem;
+  font-weight: 200;
+}
+
+@media (max-width: 68em) {
+  .solution p {
+    padding: 1rem 8rem;
+  }
+}
+
+@media (max-width: 43em) {
+  .solution p {
+    padding: 1rem;
+  }
+
+  .img-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .solution p {
+    font-size: 1.8rem;
+  }
+}

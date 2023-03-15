@@ -1,0 +1,10 @@
+.section--solutions {
+  background-color: var(--tint-10);
+  color: #fff;
+}
+
+.solutions h2 {
+  text-align: start;
+  font-size: 3.2rem;
+  font-weight: 400;
+}
